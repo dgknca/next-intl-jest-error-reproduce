@@ -1,12 +1,10 @@
-import { screen } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import Card from './Card';
 
-describe('CardComplaint', () => {
-
+describe('Card', () => {
   it('should render the card correctly', () => {
-    const { unmount } = test.customRender(
+    const { unmount } = render(
       <Card />,
-      test.genProviderProps('tr'),
     );
     expect(screen.getByRole('article')).toBeInTheDocument();
     expect(() => unmount()).not.toThrow();
