@@ -1,7 +1,6 @@
 import Link from 'next-intl/link';
 import { ComponentProps } from 'react';
 
-
 type Props = Omit<ComponentProps<typeof Link>, 'href'> & {
   href: string;
 };
